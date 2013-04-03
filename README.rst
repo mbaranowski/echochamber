@@ -9,8 +9,9 @@ Install
 
 Do this stuff::
 
-    $ git clone <this thing>
+    $ git clone https://github.com/willist/echochamber.git
+    $ cd echochamber/
     $ virtualenv ve
     $ ve/bin/pip install -r requirements
-    $ chmod u+x client.py server.py
+    $ chmod u+x client.py master.py
     $ ./client.py
