@@ -11,6 +11,6 @@ Do this stuff::
 
     $ git clone <this thing>
     $ virtualenv ve
-    $ ve/bin/pip install -r requirements
-    $ chmod u+x client.py server.py
+    $ ve/bin/pip install -r requirements.txt
+    $ chmod u+x client.py
     $ ./client.py
