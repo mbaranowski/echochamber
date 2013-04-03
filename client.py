@@ -11,7 +11,7 @@ def shpotify(cmd):
     return check_output(split("osascript -e 'tell application \"Spotify\" to {0}'".format(cmd)))
 
 def play(track):
-    shpotify('play track "{0}"'.format(track))
+    shpotify('play track \"{0}\"'.format(track.strip()))
 
 def sync(position):
     shpotify('set player position to {0}'.format(position))
