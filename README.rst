@@ -13,4 +13,4 @@ Do this stuff::
     $ virtualenv ve
     $ ve/bin/pip install -r requirements.txt
     $ chmod u+x client.py
-    $ ./client.py
+    $ ./client.py http://music.tim.willowtree.local/
