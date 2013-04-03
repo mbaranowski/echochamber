@@ -11,7 +11,7 @@ def shpotify(cmd):
     return check_output(split("osascript -e 'tell application \"Spotify\" to {0}'".format(cmd)))
 
 def play(track):
-    shpotify('play track {0}'.format(track))
+    shpotify('play track "{0}"'.format(track))
 
 def sync(position):
     shpotify('set player position to {0}'.format(position))
@@ -19,7 +19,7 @@ def sync(position):
 
 server = sys.argv[1]
 if not server.startswith('http'):
-    raise ValueError("Need a scheme there, genius [{0}]".format(server))
+    raise ValueError("Need a scheme there... [{0}]".format(server))
 
 while True:
     remote_track = requests.get(server + '/playing/').content
