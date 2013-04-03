@@ -8,12 +8,16 @@ import requests
 
 
 def shpotify(cmd):
-    return check_output(split("osascript -e 'tell application \"Spotify\" to {0}'".format(cmd)))
+    cmd = "osascript -e 'tell application \"Spotify\" to {0}'".format(cmd)
+    #print cmd
+    return check_output(split( cmd ))
 
 def play(track):
+    #print 'track', track
     shpotify('play track \"{0}\"'.format(track.strip()))
 
 def sync(position):
+    #print 'position', position
     shpotify('set player position to {0}'.format(position))
 
 
